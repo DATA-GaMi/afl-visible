@@ -123,7 +123,7 @@ ifeq "$(shell test -e $(CXX) || echo 1 )" "1"
       CXX        = $(BIN_DIR)/clang++-9
     else
       # hope for the best
-      $(warning we have trouble finding clang++-9 - llvm-config is not helping us)
+      $(warning we have trouble finding clang++-9 - llvm-config-9 is not helping us)
       CXX        = clang++-9
     endif
   endif
