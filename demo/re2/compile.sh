@@ -1,8 +1,8 @@
 #!/bin/bash -eu
 J8=-j8
-CLANGPP=clang++-7
-LLVMLINK=llvm-link-7
-OPT=opt-7
+CLANGPP=clang++-9
+LLVMLINK=llvm-link-9
+OPT=opt-9
 CXXFLAGS='-g -flto'
 
 [[ -d repo ]] || git clone https://github.com/google/re2.git repo
