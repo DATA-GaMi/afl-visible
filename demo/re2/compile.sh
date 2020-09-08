@@ -5,11 +5,11 @@ LLVMLINK=llvm-link-9
 OPT=opt-9
 CXXFLAGS='-g -flto'
 
-[[ -d repo ]] || git clone https://github.com/google/re2.git repo
+#[[ -d repo ]] || git clone https://github.com/google/re2.git repo
 mkdir -p repo/bitcode
 cd repo
 cp ../target.cc ./
-git checkout -f 499ef7eff7455ce9c9fae86111d4a77b6ac335de
+#git checkout -f 499ef7eff7455ce9c9fae86111d4a77b6ac335de
 CXX="$CLANGPP" CXXFLAGS="$CXXFLAGS" make "$J8" obj/libre2.a
 "$CLANGPP" $CXXFLAGS ./target.cc -c -o bitcode/target.o -I .
 cd bitcode
