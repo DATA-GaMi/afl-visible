@@ -145,22 +145,22 @@ echo "[+] All checks passed!"
 
 echo "[*] Making sure unicornafl is checked out"
 
-git status 1>/dev/null 2>/dev/null
-if [ $? -eq 0 ]; then
-  echo "[*] initializing unicornafl submodule"
-  git submodule init || exit 1
-  git submodule update 2>/dev/null # ignore errors
-else
-  echo "[*] cloning unicornafl"
-  test -d unicornafl || {
-    CNT=1
-    while [ '!' -d unicornafl -a "$CNT" -lt 4 ]; do
-      echo "Trying to clone unicornafl (attempt $CNT/3)"
-      git clone https://github.com/AFLplusplus/unicornafl
-      CNT=`expr "$CNT" + 1`
-    done
-  }
-fi
+#git status 1>/dev/null 2>/dev/null
+#if [ $? -eq 0 ]; then
+echo "[*] initializing unicornafl submodule"
+git submodule init || exit 1
+git submodule update 2>/dev/null # ignore errors
+#else
+echo "[*] cloning unicornafl"
+#  test -d unicornafl || {
+#    CNT=1
+#    while [ '!' -d unicornafl -a "$CNT" -lt 4 ]; do
+echo "Trying to clone unicornafl"
+git clone https://github.com/AFLplusplus/unicornafl
+#      CNT=`expr "$CNT" + 1`
+#    done
+#  }
+#fi
 
 test -d unicornafl || { echo "[-] not checked out, please install git or check your internet connection." ; exit 1 ; }
 echo "[+] Got unicornafl."
