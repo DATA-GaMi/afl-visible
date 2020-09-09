@@ -200,8 +200,8 @@
 
   setInterval(
     function () {
-      d3.csv("http://localhost:6767/out/plot_data?_=" + Math.random(), function (error, data) {
-        d3.text("http://localhost:6767/out/fuzzer_stats?_=" + Math.random(), function (error2, text) {
+      d3.csv("http://10.10.20.177:6767/out/plot_data?_=" + Math.random(), function (error, data) {
+        d3.text("http://10.10.20.177:6767/out/fuzzer_stats?_=" + Math.random(), function (error2, text) {
           if (error) throw error;
           if (error2) throw error2;
 
