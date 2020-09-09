@@ -258,9 +258,9 @@
         block_freq = null;
         // setInterval(
         //     function (x) {
-        d3.json("http://localhost:6767/out/block_freq.json?_=" + Math.random(), function (error2, _block_freq) {
+        d3.json("http://10.10.20.177:6767/out/block_freq.json?_=" + Math.random(), function (error2, _block_freq) {
             if (error2) return;
-            d3.text("http://localhost:6767/out/fuzzer_stats?_=" + Math.random(), function (error3, text) {
+            d3.text("http://10.10.20.177:6767/out/fuzzer_stats?_=" + Math.random(), function (error3, text) {
                 var map = {};
                 var temp_str = text.split("\n");
                 for (var i = 0; i < temp_str.length; i++) {
@@ -598,7 +598,7 @@
 
     function show_file(file_path, start_line, end_line) {
         var rawFile = new XMLHttpRequest();
-        rawFile.open("GET", "http://localhost:6767/" + file_path, true);
+        rawFile.open("GET", "http://10.10.20.177:6767/" + file_path, true);
         rawFile.onreadystatechange = function () {
             if (rawFile.readyState == 4 && rawFile.status == "200") {
                 var text = rawFile.responseText;
