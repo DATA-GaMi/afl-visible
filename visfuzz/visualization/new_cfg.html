@@ -253,7 +253,7 @@
     var explored_functions = null;
     var unexplored_functions = null;
     var max_block_sum = 0;
-    d3.json("http://localhost:6767/static.json", function (error, graph) {
+    d3.json("http://10.10.20.177:6767/static.json", function (error, graph) {
         if (error) throw error;
         block_freq = null;
         // setInterval(
