@@ -128,7 +128,7 @@
 
   setInterval(
     function () {
-      d3.csv("http://localhost:6767/out/plot_data?_=" + Math.random(), function (error, data) {
+      d3.csv("http://10.10.20.177:6767/out/plot_data?_=" + Math.random(), function (error, data) {
         if (error) throw error;
         var now = new Date(1000 * parseInt(data[data.length - 1]["# unix_time"]));
         add_info("更新于: " + now, "execute_footer");
