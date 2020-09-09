@@ -159,7 +159,7 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
 </body>
 <script>
-  d3.json("http://localhost:6767/out/queue/seeds", function (error, seeds) {
+  d3.json("http://10.10.20.177:6767/out/queue/seeds", function (error, seeds) {
     if (error) throw error;
     global_seeds = seeds;
     add_info(global_seeds[0]);
