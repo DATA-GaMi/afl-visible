@@ -1,8 +1,8 @@
 #!/bin/bash -eu
-J8=-j8
-CLANGPP=clang++-7
-LLVMLINK=llvm-link-7
-OPT=opt-7
+J8=-j$(nproc)
+CLANGPP=clang++
+LLVMLINK=llvm-link
+OPT=opt-9
 REPO=https://github.com/nlohmann/json.git
 REVISION=b04543ecc58188a593f8729db38c2c87abd90dc3
 
