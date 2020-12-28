@@ -11,7 +11,7 @@ cd repo
 cp ../target.cc ./
 #git checkout -f 499ef7eff7455ce9c9fae86111d4a77b6ac335de
 CXX="$CLANGPP" CXXFLAGS="$CXXFLAGS" make "$J8" obj/libre2.a
-"$CLANGPP" $CXXFLAGS ./target.cc -c -o bitcode/target.o -I .
+"$CLANGPP" $CXXFLAGS ./new_target.cc -c -o bitcode/new_target.o -I .
 cd bitcode
 ar x ../obj/libre2.a
 "$LLVMLINK" *.o -o combined.bc
